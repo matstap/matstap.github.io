@@ -14,3 +14,18 @@ if (shoesUpper === 'YES' || shoesUpper === 'Y') {
 } else {
   alert('I can\'t understand you... Everything okay? Let\'s just move on.');
 }
+
+// add a maybe case
+var married = prompt('Question 2: Is Matthew married?');
+console.log('married guess', married);
+var marriedUpper = married.toUpperCase();
+
+if (marriedUpper === 'Y' || marriedUpper === 'YES') {
+  alert('Correct! Matthew has been married for a year come June.');
+} else if ( marriedUpper === 'N' || marriedUpper === 'NO') {
+  alert('Wrong! Matthew is married.');
+} else if (marriedUpper === 'MAYBE') {
+  alert('No cheating! Now you will never know!') ;
+} else {
+  alert('Not an answer. Let\'s move on.');
+}
