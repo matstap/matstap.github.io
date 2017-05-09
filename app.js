@@ -59,3 +59,14 @@ if (chipsUp === 'Y' || chipsUp === 'YES') {
 }
 
 //question 5
+var bird = prompt('Is Eric Andre Matthew\'s favorite comedian?');
+console.log('bird guess', bird);
+birdUp = bird.yoUpperCase();
+
+if (birdUp === 'Y' || 'YES') {
+  alert('Incorrect! He\'s not Matthew\'s favorite comedian. But still, Bird Up!');
+} else if (birdUp === 'N' || 'NO') {
+  alert('You\'re right! He\'s still funny though. Bird Up!!!');
+} else {
+  alert('Incorrect answer type. I think that\'s enogh fun for today.');
+}
