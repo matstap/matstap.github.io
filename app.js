@@ -1,5 +1,6 @@
 'use strict'
 
+// greeting
 alert('Hi, there! Let\'s play a yes/no guessing game about Matthew.');
 
 // question 1
@@ -7,7 +8,7 @@ var shoes = prompt('Question 1: Does Matthew own more than 5 pairs of shoes?').t
 console.log('shoe guess:', shoes);
 
 // give different alert for YES/Y, NO/N, and undefined answers
-// add while loops to make sure of valid answers
+// while loops to make sure of valid answers
 while (shoes !== 'YES' && shoes !== 'Y' && shoes !== 'N' && shoes !== 'NO') {
   alert('Let\'s try that again.');
   shoes = prompt('Question 1: Does Matthew own more than 5 pairs of shoes?').toUpperCase();
@@ -83,3 +84,6 @@ if (bird === 'Y' || bird === 'YES') {
 } else {
   alert('You\'re right! He\'s still funny though. Bird Up!!!');
 }
+
+// goodbye message
+alert('That was fun! Now you\'ve learned a little bit about Matthew!');
