@@ -154,7 +154,7 @@ while (count <= 6 && flag === false) {
 if (count > 6) {
   alert('Sorry, you didn\'t get it!');
 }
-alert('Matthew\'s hobbies are: ' + hobbies[0] + hobbies[1] + hobbies[2] + hobbies[3]);
+alert('Matthew\'s hobbies are: ' + hobbies[0] + ', ' + hobbies[1] + ', ' + hobbies[2] + ', ' + hobbies[3]);
 
 
 // goodbye message
