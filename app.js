@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // greeting
 alert('Hi, there! Let\'s play a yes/no guessing game about Matthew.');
@@ -85,5 +85,22 @@ if (bird === 'Y' || bird === 'YES') {
   alert('You\'re right! He\'s still funny though. Bird Up!!!');
 }
 
-// goodbye message
-alert('That was fun! Now you\'ve learned a little bit about Matthew!');
+/*// goodbye message
+alert('That was fun! Now you\'ve learned a little bit about Matthew!');*/
+
+// question 6, number guess game
+var number;
+var counter = 1;
+// correct integer between 0 and 20
+var correctNum = Math.floor(Math.random() * 21);
+
+while (number !== correctNum) {
+  number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20? You get 4 guesses.'));
+
+  if (number < correctNum) {
+    alert('Too low');
+    counter++;
+  } else if (number > correctNum) {
+    
+  }
+}
