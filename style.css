@@ -1,17 +1,33 @@
 header {
   background: #0DFF97;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
-img {
-  width: 300px;
-  hight: auto;
-  padding: 0 0 0 15;
+.left {
+  float: left;
+  background: pink;
 }
 
-figcaption {
+.left img {
+  width: 300px;
+  hight: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.left figcaption {
   font-family: fantasy;
   color: purple;
-  padding: 5 0 0 15; 
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.right {
+  background: blue;
+}
+
+footer {
+  background: gold;
+  padding-left: 15px;
 }
