@@ -128,16 +128,16 @@ if (counter > 4) {
 // question 7, 4 correct answers, 6 tries
 var hobbies = ['video games', 'hiking', 'cooking', 'saxophone'];
 var answer;
-counter = 1;
+var count = 1;
 var flag = false;
 
-while (counter <= 6) {
-  answer = prompt('What is one of Matthew\'s hobbies?').toUpperCase();
+while (count <= 6) {
+  answer = prompt('What is one of Matthew\'s hobbies?');
   console.log('hobby guess:', answer);
 
   for (var i=0; i < hobbies.length; i++) {
-    console.log('current hobby', stuff[i]);
-    if (answer === stuff[i]) {
+    console.log('current hobby', hobbies[i]);
+    if (answer === hobbies[i]) {
       alert('That\'s right!');
       flag = true;
       rightAnswers++;
@@ -147,14 +147,14 @@ while (counter <= 6) {
 
   if (!flag) {
     alert('Try again!');
-    counter++;
+    count++;
   }
 }
 
-if (counter > 6) {
+if (count > 6) {
   alert('Sorry, you didn\'t get it!');
 }
-alert('Matthew\'s hobbies are:', hobbies);
+alert('Matthew\'s hobbies are: ' + hobbies[0] + hobbies[1] + hobbies[2] + hobbies[3]);
 
 
 // goodbye message
