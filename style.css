@@ -1,33 +1,4 @@
-header {
-  background: #0DFF97;
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.left {
-  float: left;
-  background: pink;
-}
-
-.left img {
-  width: 300px;
-  hight: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.left figcaption {
-  font-family: fantasy;
-  color: purple;
-  padding-top: 5px;
-  padding-left: 15px;
-}
-
-.right {
-  background: #93ECFF;
-}
-
-footer {
-  background: #FFCC2E;
-  padding-left: 15px;
+img {
+  max-width: 300px;
+  height: auto;
 }
