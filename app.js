@@ -131,7 +131,7 @@ var answer;
 var count = 1;
 var flag = false;
 
-while (count <= 6) {
+while (count <= 6 && flag === false) {
   answer = prompt('What is one of Matthew\'s hobbies?');
   console.log('hobby guess:', answer);
 
@@ -145,7 +145,7 @@ while (count <= 6) {
     }
   }
 
-  if (!flag) {
+  if (flag === false) {
     alert('Try again!');
     count++;
   }
@@ -158,4 +158,4 @@ alert('Matthew\'s hobbies are: ' + hobbies[0] + hobbies[1] + hobbies[2] + hobbie
 
 
 // goodbye message
-alert('That was fun! Now you\'ve learned a little bit about Matthew! You got ' + rightAnswers + ' correct!');
+alert('That was fun! Now you\'ve learned a little bit about Matthew! You got ' + rightAnswers + ' of 7 correct!');
