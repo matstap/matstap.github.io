@@ -88,7 +88,7 @@ if (bird === 'Y' || bird === 'YES') {
 /*// goodbye message
 alert('That was fun! Now you\'ve learned a little bit about Matthew!');*/
 
-// question 6, number guess game
+// question 6, number guess game, 4 tries
 var number;
 var counter = 1;
 // correct integer between 0 and 20
@@ -118,4 +118,23 @@ if (counter > 4) {
   alert('Sorry! His favorite number is ' + correctNum);
 }
 
-// question 7 
+// question 7, 4 correct answers, 6 tries
+var hobbies = ['video games', 'hiking', 'cooking', 'saxophone'];
+var answer = prompt('What is one of Matthew\'s hobbies?').toUpperCase();
+console.log('hobby guess:', answer);
+var flag;
+
+for (var i=0; i < hobbies.length; i++) {
+  console.log('current hobby', stuff[i]);
+  if (answer === stuff[i]) {
+    alert('That\'s right!');
+    flag = true;
+    break;
+  }
+}
+
+if (!flag) {
+  alert('Try again!');
+}
+
+alert('Matthew\'s hobbies are:', hobbies);
