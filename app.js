@@ -109,7 +109,7 @@ while (number !== correctNum && counter <= 4) {
     counter++;
   } else if (number > correctNum) {
     alert('Too high');
-    count++;
+    counter++;
   } else if (number === NaN || number === null) {
     alert('Enter a number please. And sorry, that\'s one guess.');
     counter++;
