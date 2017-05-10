@@ -50,13 +50,12 @@ while (zebra !== 'Y' && zebra !== 'YES' && zebra !== 'N' && zebra !== 'NO'){
   console.log('zebra guess:', zebra);
 }
 
-// gimme question
+
 if (zebra === 'Y' || zebra === 'YES') {
   alert('Neither correct or incorrect. Zebra is a state of mind, friend.');
   rightAnswers++;
 } else {
-  alert('Hey, man. You never know.');
-  rightAnswers++;
+  alert('Hey, man. You never know. Let\'s say... No point!');
 }
 
 // question 4
@@ -103,6 +102,7 @@ var correctNum = Math.floor(Math.random() * 21);
 while (number !== correctNum && counter <= 4) {
   number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20?'));
   console.log('number guess', number);
+  console.log('counter', counter);
 
   if (number < correctNum) {
     alert('Too low');
@@ -134,6 +134,7 @@ var flag = false;
 while (count <= 6 && flag === false) {
   answer = prompt('What is one of Matthew\'s hobbies?');
   console.log('hobby guess:', answer);
+  console.log('count', count);
 
   for (var i=0; i < hobbies.length; i++) {
     console.log('current hobby', hobbies[i]);
@@ -151,6 +152,7 @@ while (count <= 6 && flag === false) {
   }
 }
 
+console.log('count', count)
 if (count > 6) {
   alert('Sorry, you didn\'t get it!');
 }
