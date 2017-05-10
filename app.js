@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // greeting
 alert('Hi, there! Let\'s play a yes/no guessing game about Matthew.');
