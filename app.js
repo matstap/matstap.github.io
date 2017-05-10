@@ -94,13 +94,23 @@ var counter = 1;
 // correct integer between 0 and 20
 var correctNum = Math.floor(Math.random() * 21);
 
-while (number !== correctNum) {
+while (number !== correctNum && counter < 4) {
   number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20? You get 4 guesses.'));
+  console.log('number guess', number);
 
   if (number < correctNum) {
     alert('Too low');
     counter++;
   } else if (number > correctNum) {
-    
+    alert('Too high');
+    count++;
+  } else if (number === NaN || number === null) {
+    alert('Enter a number please. And sorry, that\'s one guess.');
+    counter++;
+  } else {
+    alert('That\'s right! You guessed it in ' + counter + ' tries.');
+    break;
   }
 }
+
+ console.log('counter', counter);
