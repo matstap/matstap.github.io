@@ -94,8 +94,8 @@ var counter = 1;
 // correct integer between 0 and 20
 var correctNum = Math.floor(Math.random() * 21);
 
-while (number !== correctNum && counter =< 4) {
-  number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20? You get 4 guesses.'));
+while (number !== correctNum && counter <= 4) {
+  number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20?'));
   console.log('number guess', number);
 
   if (number < correctNum) {
@@ -120,21 +120,30 @@ if (counter > 4) {
 
 // question 7, 4 correct answers, 6 tries
 var hobbies = ['video games', 'hiking', 'cooking', 'saxophone'];
-var answer = prompt('What is one of Matthew\'s hobbies?').toUpperCase();
-console.log('hobby guess:', answer);
-var flag;
+var answer;
+counter = 1;
+var flag = false;
 
-for (var i=0; i < hobbies.length; i++) {
-  console.log('current hobby', stuff[i]);
-  if (answer === stuff[i]) {
-    alert('That\'s right!');
-    flag = true;
-    break;
+while (counter <= 6) {
+  answer = prompt('What is one of Matthew\'s hobbies?').toUpperCase();
+  console.log('hobby guess:', answer);
+
+  for (var i=0; i < hobbies.length; i++) {
+    console.log('current hobby', stuff[i]);
+    if (answer === stuff[i]) {
+      alert('That\'s right!');
+      flag = true;
+      break;
+    }
+  }
+
+  if (!flag) {
+    alert('Try again!');
+    counter++;
   }
 }
 
-if (!flag) {
-  alert('Try again!');
+if (counter > 6) {
+  alert('Sorry, you didn\'t get it!');
 }
-
 alert('Matthew\'s hobbies are:', hobbies);
