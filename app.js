@@ -2,6 +2,7 @@
 
 // greeting
 alert('Hi, there! Let\'s play a yes/no guessing game about Matthew.');
+var rightAnswers = 0;
 
 // question 1
 var shoes = prompt('Question 1: Does Matthew own more than 5 pairs of shoes?').toUpperCase();
@@ -19,6 +20,7 @@ if (shoes === 'YES' || shoes === 'Y') {
   alert('Ouch! Sorry, that\'s incorrect! He only has 4 pairs.');
 } else {
   alert('Correct! Matthew has 3 pairs of shoes.');
+  rightAnswers++;
 }
 
 // question 2.
@@ -33,6 +35,7 @@ while (married !== 'Y' && married !== 'YES' && married !== 'N' && married !== 'N
 
 if (married === 'Y' || married === 'YES') {
   alert('Correct! Matthew has been married for a year come June.');
+  rightAnswers++;
 } else {
   alert('Wrong! Matthew is married.');
 }
@@ -47,10 +50,13 @@ while (zebra !== 'Y' && zebra !== 'YES' && zebra !== 'N' && zebra !== 'NO'){
   console.log('zebra guess:', zebra);
 }
 
+// gimme question
 if (zebra === 'Y' || zebra === 'YES') {
   alert('Neither correct or incorrect. Zebra is a state of mind, friend.');
+  rightAnswers++;
 } else {
   alert('Hey, man. You never know.');
+  rightAnswers++;
 }
 
 // question 4
@@ -65,12 +71,13 @@ while (chips !== 'Y' && chips !== 'YES' && chips !== 'N' && chips !== 'NO') {
 
 if (chips === 'Y' || chips === 'YES') {
   alert('Yes! Matthew has an unhealthy love of potato chips!');
+  rightAnswers++;
 } else {
   alert('Matthew only wishes you were correct. Matthew eats too many potato chips.');
 }
 
 //question 5
-var bird = prompt('Final Question: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
+var bird = prompt('Question 5: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
 console.log('bird guess:', bird);
 
 while (bird !== 'Y' && bird !== 'YES' && bird !== 'N' && bird !== 'NO') {
@@ -83,10 +90,9 @@ if (bird === 'Y' || bird === 'YES') {
   alert('Incorrect! He\'s not Matthew\'s favorite comedian. But still, Bird Up!');
 } else {
   alert('You\'re right! He\'s still funny though. Bird Up!!!');
+  rightAnswers++;
 }
 
-/*// goodbye message
-alert('That was fun! Now you\'ve learned a little bit about Matthew!');*/
 
 // question 6, number guess game, 4 tries
 var number;
@@ -109,6 +115,7 @@ while (number !== correctNum && counter <= 4) {
     counter++;
   } else {
     alert('That\'s right! You guessed it in ' + counter + ' tries.');
+    rightAnswers++;
     break;
   }
 }
@@ -133,6 +140,7 @@ while (counter <= 6) {
     if (answer === stuff[i]) {
       alert('That\'s right!');
       flag = true;
+      rightAnswers++;
       break;
     }
   }
@@ -147,3 +155,7 @@ if (counter > 6) {
   alert('Sorry, you didn\'t get it!');
 }
 alert('Matthew\'s hobbies are:', hobbies);
+
+
+// goodbye message
+alert('That was fun! Now you\'ve learned a little bit about Matthew! You got ' + rightAnswers + ' correct!');
