@@ -94,7 +94,7 @@ var counter = 1;
 // correct integer between 0 and 20
 var correctNum = Math.floor(Math.random() * 21);
 
-while (number !== correctNum && counter < 4) {
+while (number !== correctNum && counter =< 4) {
   number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20? You get 4 guesses.'));
   console.log('number guess', number);
 
@@ -113,4 +113,9 @@ while (number !== correctNum && counter < 4) {
   }
 }
 
- console.log('counter', counter);
+console.log('counter', counter);
+if (counter > 4) {
+  alert('Sorry! His favorite number is ' + correctNum);
+}
+
+// question 7 
