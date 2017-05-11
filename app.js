@@ -1,5 +1,7 @@
 'use strict';
 
+// still need to put questions in array
+
 // greeting
 alert('Hi, there! Let\'s play a yes/no guessing game about Matthew.');
 var rightAnswers = 0;
