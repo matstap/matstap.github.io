@@ -5,19 +5,20 @@ header {
 }
 
 .pic {
-  float: left;
+  float: right;
+  text-align: center;
+  width: 35%;
 }
 
 .pic img {
-  max-width: 300px;
+  width: 80%;
   height: auto;
 }
 
-.pic figcaption {
-  text-align: center;
-}
-
 .bio {
+  text-align: left;
+  float: left;
+  width: 65%;
   text-align: center;
 }
 
