@@ -1,13 +1,26 @@
 header {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .pic {
-  height: 100%;
   float: left;
 }
 
-img {
+.pic img {
   max-width: 300px;
   height: auto;
+}
+
+.pic figcaption {
+  text-align: center;
+}
+
+.bio {
+  text-align: center;
+}
+
+.bio ul {
+  list-style-type: none;
 }
