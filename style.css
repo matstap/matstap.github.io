@@ -1,3 +1,12 @@
+header {
+  text-align: center;
+}
+
+.pic {
+  height: 100%;
+  float: left;
+}
+
 img {
   max-width: 300px;
   height: auto;
