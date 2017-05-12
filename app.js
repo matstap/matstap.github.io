@@ -179,40 +179,40 @@ function numGame(entry, correct,itr) {
   alert('You\'re out of guesses.')
   return 0;
 }
+
+//Question 6
 correctAnswers += numGame(entries[5], correct[5], 4);
-// question 7, 4 correct answers, 6 tries
-var hobbies = ['video games', 'hiking', 'cooking', 'saxophone'];
-var answer;
-var count = 1;
-var flag = false;
 
-while (count <= 6 && flag === false) {
-  answer = prompt('What is one of Matthew\'s hobbies?');
-  console.log('hobby guess:', answer);
-  console.log('count', count);
 
-  for (var i=0; i < hobbies.length; i++) {
-    console.log('current hobby', hobbies[i]);
-    if (answer === hobbies[i]) {
-      alert('That\'s right!');
-      flag = true;
-      rightAnswers++;
-      break;
+function multChoice(entry, correct, itr) {
+  var answer;
+  var count = 1;
+
+  while (count <= 6) {
+    answer = prompt(entry);
+    console.log('guess:', answer);
+    console.log('count', count);
+
+    for (var i=0; i < entry.length; i++) {
+      console.log('current entry', entry[i]);
+      if (answer === entry[i]) {
+        alert('That\'s right!');
+        return 1;
+      }
     }
-  }
 
-  if (flag === false) {
+
     alert('Try again!');
     count++;
   }
-}
-
 console.log('count', count)
-if (count > 6) {
   alert('Sorry, you didn\'t get it!');
+  alert('The correct answers are: ' + entry[0] + ', ' + entry[1] + ', ' + entry[2] + ', ' + entry[3]);
+  return 0;
 }
-alert('Matthew\'s hobbies are: ' + hobbies[0] + ', ' + hobbies[1] + ', ' + hobbies[2] + ', ' + hobbies[3]);
 
+// question 7, 4 correct answers, 6 tries
+rightAnswers += multChoice(entries[6], correct[6], 6);
 
 // goodbye message
 alert('That was fun! Now you\'ve learned a little bit about Matthew! You got ' + rightAnswers + ' of 7 correct!');
