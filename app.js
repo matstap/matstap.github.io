@@ -152,7 +152,7 @@ function numGame(entry, correct,itr) {
     } else if (number > correct) {
       alert('Too high');
       counter++;
-    } else if (number === NaN || number === null) {
+    } else if ( isNaN(number) || number === null) {
       alert('Enter a number please. And sorry, that\'s one guess.');
       counter++;
     } else {
@@ -166,14 +166,14 @@ function numGame(entry, correct,itr) {
 }
 
 //Question 6
-correctAnswers += numGame(entries[5], correct[5], 4);
+rightAnswers += numGame(entries[5], correct[5], 4);
 
 
 function multChoice(entry, correct, itr) {
   var answer;
   var count = 1;
 
-  while (count <= 6) {
+  while (count <= itr) {
     answer = prompt(entry);
     console.log('guess:', answer);
     console.log('count', count);
