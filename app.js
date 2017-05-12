@@ -83,7 +83,7 @@ console.log('bird guess:', bird);
 
 while (bird !== 'Y' && bird !== 'YES' && bird !== 'N' && bird !== 'NO') {
   alert('Let\'s try that again.');
-  var bird = prompt('Final Question: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
+  bird = prompt('Final Question: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
   console.log('bird guess:', bird);
 }
 
@@ -112,7 +112,7 @@ while (number !== correctNum && counter <= 4) {
   } else if (number > correctNum) {
     alert('Too high');
     counter++;
-  } else if (number === NaN || number === null) {
+  } else if (isNaN(number) || number === null) {
     alert('Enter a number please. And sorry, that\'s one guess.');
     counter++;
   } else {
@@ -154,7 +154,7 @@ while (count <= 6 && flag === false) {
   }
 }
 
-console.log('count', count)
+console.log('count', count);
 if (count > 6) {
   alert('Sorry, you didn\'t get it!');
 }
