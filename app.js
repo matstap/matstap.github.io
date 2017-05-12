@@ -59,6 +59,8 @@ for (var i=0; i < entries.length; i++) {
   rightAnswers += quest15(entries[i], correct[i], responses[i]);
 }
 
+/*
+
 // question 1
 var shoes = prompt('Question 1: Does Matthew own more than 5 pairs of shoes?').toUpperCase();
 console.log('shoe guess:', shoes);
@@ -147,39 +149,37 @@ if (bird === 'Y' || bird === 'YES') {
   rightAnswers++;
 }
 
+*/
+
 
 // question 6, number guess game, 4 tries
-var number;
-var counter = 1;
-// correct integer between 0 and 20
-var correctNum = Math.floor(Math.random() * 21);
 
-while (number !== correctNum && counter <= 4) {
-  number = parseInt(prompt('What is Matthew\'s favorite number between 0 and 20?'));
-  console.log('number guess', number);
-  console.log('counter', counter);
+function numGame(entry, correct,itr) {
+  var number;
+  var counter = 1;
+  while (number !== correct && counter <= itr) {
+    number = parseInt(prompt(entry));
+    console.log('number guess', number);
+    console.log('counter', counter);
 
-  if (number < correctNum) {
-    alert('Too low');
-    counter++;
-  } else if (number > correctNum) {
-    alert('Too high');
-    counter++;
-  } else if (number === NaN || number === null) {
-    alert('Enter a number please. And sorry, that\'s one guess.');
-    counter++;
-  } else {
-    alert('That\'s right! You guessed it in ' + counter + ' tries.');
-    rightAnswers++;
-    break;
+    if (number < correct) {
+      alert('Too low');
+      counter++;
+    } else if (number > correct) {
+      alert('Too high');
+      counter++;
+    } else if (number === NaN || number === null) {
+      alert('Enter a number please. And sorry, that\'s one guess.');
+      counter++;
+    } else {
+      alert('That\'s right! You guessed it in ' + counter + ' tries.');
+      return 1;
+    }
   }
+  alert('You\'re out of guesses.')
+  return 0;
 }
-
-console.log('counter', counter);
-if (counter > 4) {
-  alert('Sorry! His favorite number is ' + correctNum);
-}
-
+correctAnswers += numGame(entries[5], correct[5], 4);
 // question 7, 4 correct answers, 6 tries
 var hobbies = ['video games', 'hiking', 'cooking', 'saxophone'];
 var answer;
