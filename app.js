@@ -138,7 +138,7 @@ console.log('bird guess:', bird);
 
 while (bird !== 'Y' && bird !== 'YES' && bird !== 'N' && bird !== 'NO') {
   alert('Let\'s try that again.');
-  var bird = prompt('Final Question: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
+  bird = prompt('Final Question: Is Eric Andre Matthew\'s favorite comedian?').toUpperCase();
   console.log('bird guess:', bird);
 }
 
@@ -153,6 +153,7 @@ if (bird === 'Y' || bird === 'YES') {
 
 
 // question 6, number guess game, 4 tries
+
 
 function numGame(entry, correct,itr) {
   var number;
@@ -175,6 +176,7 @@ function numGame(entry, correct,itr) {
       alert('That\'s right! You guessed it in ' + counter + ' tries.');
       return 1;
     }
+
   }
   alert('You\'re out of guesses.')
   return 0;
@@ -205,7 +207,10 @@ function multChoice(entry, correct, itr) {
     alert('Try again!');
     count++;
   }
+
 console.log('count', count)
+
+
   alert('Sorry, you didn\'t get it!');
   alert('The correct answers are: ' + entry[0] + ', ' + entry[1] + ', ' + entry[2] + ', ' + entry[3]);
   return 0;
