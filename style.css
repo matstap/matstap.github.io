@@ -1,0 +1,21 @@
+/* global */
+body {
+  font: 1em helvetica;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font: 1.5em bold;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 2.5em;
+}
+
+li {
+  line-height: 1.5em;
+}
