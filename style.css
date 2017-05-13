@@ -69,3 +69,24 @@ main {
 .about {
   margin-top: 20px;
 }
+
+.space-holder {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  float: left;
+}
+
+.lists {
+  float: left;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+
+.skills {
+  margin-right: 0px;
+}
+
+.lists li:first-child {
+  margin-top: -20px;
+}
