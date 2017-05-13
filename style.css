@@ -53,3 +53,19 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+main {
+  width: 800px;
+  margin: 20px auto;
+  margin-top: 100px;
+}
+
+.profile {
+  margin-top: 20px;
+  float: left;
+  margin-right: 20px;
+}
+
+.about {
+  margin-top: 20px;
+}
