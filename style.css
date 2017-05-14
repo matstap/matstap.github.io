@@ -1,6 +1,6 @@
 /* global */
 body {
-  font: 1em helvetica;
+  font-family: helvetica;
 }
 
 h1 {
@@ -8,7 +8,8 @@ h1 {
 }
 
 h2 {
-  font: 1.5em bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 ol {
@@ -31,7 +32,11 @@ header {
   top: 0;
   height: 80px;
   width: 100%;
-  background: black;
+  background: #3C4346;
+}
+
+body {
+  background: #D6DCE0;
 }
 
 nav {
@@ -41,8 +46,9 @@ nav {
 
 nav li {
   display: inline-block;
-  margin-right: 175px;
+  margin-right: 135px;
   margin-top: 30px;
+  font-size: 1.5em;
 }
 
 nav li:last-child {
